@@ -1,0 +1,49 @@
+.filter {
+    margin-bottom: $spacer;
+    select {
+        margin-bottom: round($spacer / 2);
+    }
+    label {
+        margin-bottom: 0;
+        font-weight: $font-weight-bold;
+        color: $black;
+    }
+    > div {
+        &:last-child {
+            select {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        display: flex;
+        align-items: center;
+        select {
+            margin-bottom: 0;
+        }
+        > div {
+            width: calc(33.333333% + #{$grid-gutter-width});
+            padding-right: $grid-gutter-width;
+            &:last-child {
+                width: 33.333333%;
+                padding-right: 0;
+            }
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+        select {
+            width: 200px;
+        }
+        label {
+            padding-right: round($grid-gutter-width / 4);
+        }
+        > div {
+            display: flex;
+            align-items: center;
+            width: auto;
+            &:last-child {
+                width: auto;
+            }
+        }
+    }
+}

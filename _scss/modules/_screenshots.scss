@@ -1,0 +1,15 @@
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -$spacer;
+    a {
+        display: block;
+        width: 100%;
+        margin-bottom: $spacer;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        a {
+            width: 50%;
+        }
+    }
+}

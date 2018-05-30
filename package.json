@@ -1,0 +1,30 @@
+{
+  "name": "shoptet-doplnky",
+  "version": "1.0.0",
+  "author": "Václav Vracovský, Shoptet, https://www.shoptet.cz/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shoptet/microsite-doplnky.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shoptet/microsite-doplnky/issues"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.1",
+    "load-grunt-tasks": "^4.0.0"
+  },
+  "jsFiles": [
+    "../scaffolding/vendor/jquery-3.3.1.min.js",
+    "../scaffolding/vendor/popper.min.js",
+    "../scaffolding/vendor/bs/js/util.js",
+    "../scaffolding/vendor/bs/js/dropdown.js",
+    "../scaffolding/vendor/jquery.colorbox-min.js",
+    "js/netteForms.min.js",
+    "js/main.js"
+  ]
+}

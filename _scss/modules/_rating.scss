@@ -1,0 +1,114 @@
+.rating-summary-wrapper,
+.rating-reviews {
+    max-width: map-get($container-max-widths, 'lg');
+}
+
+.rating-form {
+    max-width: map-get($container-max-widths, 'md');
+    margin-bottom: $spacer;
+    .form-control {
+        margin-bottom: $spacer;
+    }
+    textarea.form-control {
+        margin-bottom: round($spacer / 2);
+    }
+}
+
+.rating-form-submit {
+    padding-top: $spacer;
+}
+
+.rating-summary-wrapper,
+.rating-summary-overview,
+.rating-review {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rating-summary-wrapper {
+    margin-bottom: $spacer;
+}
+
+.rating-summary,
+.rating-add {
+    width: 100%;
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        width: 50%;
+    }
+}
+
+.rating-summary {
+    margin-bottom: $spacer;
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        margin-bottom: 0;
+    }
+}
+
+.rating-add {
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        align-self: flex-end;
+        text-align: right;
+    }
+}
+
+.rating-summary-overview {
+    margin-bottom: $spacer;
+    .stars {
+        margin-right: round($grid-gutter-width / 4);
+    }
+}
+
+.rating-review {
+    .stars {
+        margin-right: round($grid-gutter-width / 4);
+    }
+    .progress {
+        width: 100px;
+    }
+    .info {
+        width: 100%;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        .info {
+            width: auto;
+        }
+        .progress {
+            margin-right: round($grid-gutter-width / 4);
+        }
+    }
+}
+
+
+.rating-review-wrapper {
+    padding-top: $spacer;
+    padding-bottom: round($spacer / 2);
+    border-top: 1px solid $border-color;
+}
+
+.rating-review-content {
+    margin-bottom: round($spacer / 2);
+}
+
+.rating-review-reaction {
+    margin-left: $grid-gutter-width;
+    margin-top: round($spacer / 2);
+    padding: round($grid-gutter-width / 2);
+    background-color: $gray-lighter;
+    border-radius: $border-radius;
+}
+
+.rating-review-info-wrapper {
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.rating-review-rating {
+    @media (min-width: map-get($grid-breakpoints, 'md')) {
+
+    }
+}

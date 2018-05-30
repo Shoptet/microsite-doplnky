@@ -1,0 +1,10 @@
+$fa-font-path: "../../scaffolding/vendor/fa/webfonts";
+$claim-bg-image: url('../img/bulbs.png');
+$colorbox-path: "../../scaffolding/img/colorbox/";
+
+@import "../../scaffolding/shoptet";
+@import "modules/variables";
+
+@import "modules/filter";
+@import "modules/screenshots";
+@import "modules/rating";
