@@ -28,7 +28,8 @@ module.exports = function(grunt) {
             css: {
                 files: [
                     '_scss/*.scss',
-                    '_scss/modules/*.scss'
+                    '_scss/modules/*.scss',
+                    '../scaffolding/shoptet/*.scss'
                 ],
                 tasks: ['sass:development'],
                 options: {
