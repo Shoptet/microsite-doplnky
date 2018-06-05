@@ -31,10 +31,8 @@
         }
     }
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        select {
-            width: 200px;
-        }
         label {
+            white-space: nowrap;
             padding-right: round($grid-gutter-width / 4);
         }
         > div {
