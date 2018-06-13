@@ -1,0 +1,175 @@
+$service-2-gutter-width: round($grid-gutter-width / 2);
+$service-4-gutter-width: round($grid-gutter-width * .75);
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-bottom: -$grid-gutter-width;
+    + .more,
+    + .pagination {
+        margin-top: $spacer;
+    }
+}
+
+.service {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: $grid-gutter-width;
+    &:hover {
+        text-decoration: none;
+    }
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        width: 50%;
+        padding-left: $service-2-gutter-width;
+        padding-right: $service-2-gutter-width;
+        &:nth-child(odd) {
+            padding-left: 0;
+        }
+        &:nth-child(even) {
+            padding-right: 0;
+        }
+    }
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+        width: calc(25% + #{$service-4-gutter-width / 2});
+        padding-left: $service-4-gutter-width;
+        padding-right: $service-4-gutter-width;
+        &:nth-child(4n+2),
+        &:nth-child(4n+3) {
+            padding-left: $service-4-gutter-width;
+            padding-right: $service-4-gutter-width;
+        }
+        &:nth-child(4n+1),
+        &:nth-child(4n+4) {
+            width: calc(25% - #{$service-4-gutter-width / 2});
+        }
+        &:nth-child(4n+1) {
+            padding-left: 0;
+        }
+        &:nth-child(4n+4) {
+            padding-right: 0;
+        }
+        .half & {
+            width: 50%;
+            &:nth-child(odd) {
+                padding-left: 0;
+            }
+            &:nth-child(even) {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.service-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    @include transition();
+    &:hover {
+        box-shadow: $box-shadow;
+    }
+}
+
+.service-img,
+.service-title,
+.service-info,
+.service-rating {
+    width: 100%;
+}
+
+.service-img {
+    align-self: flex-start;
+    display: block;
+    max-width: 100%;
+    margin: 0 0 round($grid-gutter-width / 2);
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        margin-left: auto;
+        margin-right: auto;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+}
+
+.service-title,
+.service-info {
+    margin: 0 0 round($grid-gutter-width / 4);
+    padding: 0 round($grid-gutter-width / 2);
+}
+
+.service-title {
+    font-size: 1rem;
+}
+
+.service-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.service-price {
+    padding-right: round($grid-gutter-width / 2);
+    font-weight: $font-weight-bold;
+    color: $black;
+}
+
+.service-category,
+.service-rating {
+    color: $body-color;
+}
+
+.service-category {
+    padding-right: round($grid-gutter-width / 2);
+}
+
+.service-rating,
+.service-labels {
+    font-size: $font-size-sm;
+}
+
+.service-rating {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    padding: round($spacer / 2) round($grid-gutter-width / 2);
+    background-color: $gray-light;
+}
+
+.service-rating-stars,
+.service-rating-count {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 50%;
+    line-height: 0;
+}
+
+.service-labels {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+}
+
+.service-label {
+    padding: 0 round($grid-gutter-width / 4);
+    color: #fff;
+    &.service-label-shoptet {
+        background-color: $shoptet-blue;
+    }
+    &.service-label-new {
+        background-color: $shoptet-green;
+    }
+    &:last-child {
+        border-top-right-radius: $border-radius;
+    }
+}
+
+.service-rating-count {
+    text-align: right;
+}

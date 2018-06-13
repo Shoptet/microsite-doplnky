@@ -91,13 +91,12 @@ function LoaderExtension(naja, idElement, forceRelative) {
 
 if (typeof Nette !== 'undefined') {
 
-    Nette.formErrorClass = 'form_error';
+    Nette.formErrorClass = 'form-error';
 
     /**
      * Add display error message to Nette Form.
      */
     Nette.addError = function(element, message) {
-        var errorClass = Nette.formErrorClass;
         if (element.focus) {
             element.focus();
         }
@@ -105,7 +104,7 @@ if (typeof Nette !== 'undefined') {
             var e = document.createElement('div');
             e.innerText = message;
             e.className = Nette.formErrorClass;
-            element.parentNode.insertBefore(e, element.nextSibling);
+            element.parentNode.insertBefore(e, element);
         }
     };
 
