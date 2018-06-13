@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         sass: {
             development: {
                 options: {
-                    style: 'nested',
+                    style: 'compressed',
                     sourcemap: 'inline'
                 },
                 files: {
@@ -40,22 +40,13 @@ module.exports = function(grunt) {
                 files: [
                     'js/*.js'
                 ],
-                tasks: ['uglify:development'],
+                tasks: ['uglify:production'],
                 options: {
                     livereload: 35729
                 }
             }
         },
         uglify: {
-            development: {
-                options: {
-                    mangle: false,
-                    compress: false
-                },
-                files: {
-                    '../dist/js/build.js': pkg.jsFiles
-                }
-            },
             production: {
                 options: {
                     mangle: false,

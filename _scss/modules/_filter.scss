@@ -8,24 +8,15 @@
         font-weight: $font-weight-bold;
         color: $black;
     }
-    > div {
-        &:last-child {
-            select {
-                margin-bottom: 0;
-            }
-        }
-    }
     @media (min-width: map-get($grid-breakpoints, 'sm')) {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        select {
-            margin-bottom: 0;
-        }
         > div {
-            width: calc(33.333333% + #{$grid-gutter-width});
+            width: calc(50% + #{round($grid-gutter-width / 2)});
             padding-right: $grid-gutter-width;
-            &:last-child {
-                width: 33.333333%;
+            &:nth-child(even) {
+                width: calc(50% - #{round($grid-gutter-width / 2)});
                 padding-right: 0;
             }
         }
@@ -35,12 +26,20 @@
             white-space: nowrap;
             padding-right: round($grid-gutter-width / 4);
         }
+        select {
+            margin-bottom: 0;
+        }
         > div {
-            display: flex;
-            align-items: center;
             width: auto;
-            &:last-child {
+            padding-right: round($grid-gutter-width / 2);
+            &:nth-child(even) {
                 width: auto;
+                padding-right: round($grid-gutter-width / 2);
+            }
+            &.filter-info {
+                flex-grow: 1;
+                padding-right: 0;
+                text-align: right;
             }
         }
     }
