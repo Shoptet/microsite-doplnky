@@ -64,7 +64,10 @@ Loader.prototype.show = function() {
     }
 }
 Loader.prototype.hide = function() {
-    this.overlay.style.display = 'none';
+    overlay = document.getElementById(this.id);
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
 }
 
 
@@ -78,11 +81,13 @@ function LoaderExtension(naja, idElement, forceRelative) {
         this.loader = new Loader(idElement, forceRelative);
     }.bind(this));
     naja.addEventListener('start', showLoader.bind(this));
-    //don`t call hide, because content of div is replaced by ajax response
-    //naja.addEventListener('complete', hideLoader.bind(this));
+    naja.addEventListener('complete', hideLoader.bind(this));
 
     function showLoader() {
         this.loader.show();
+    }
+    function hideLoader() {
+        this.loader.hide();
     }
     return this;
 }
