@@ -1,13 +1,13 @@
 .screenshots {
     display: flex;
     flex-wrap: wrap;
-    justify-content: stretch;
     margin-bottom: -$spacer;
     a {
-        flex-grow: 1;
+        flex-grow: 0;
         display: block;
         width: 50%;
         margin-bottom: $spacer;
+        border: 1px solid $border-color;
     }
     @media (min-width: map-get($grid-breakpoints, 'sm')) {
         a {

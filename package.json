@@ -25,6 +25,7 @@
     "../scaffolding/vendor/bs/js/util.js",
     "../scaffolding/vendor/bs/js/dropdown.js",
     "../scaffolding/vendor/jquery.colorbox-min.js",
+    "../scaffolding/shoptet/js/shoptet.js",
     "node_modules/naja/dist/Naja.js",
     "js/netteForms.min.js",
     "js/main.js"
