@@ -7,7 +7,7 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     align-items: stretch;
     margin-bottom: -$grid-gutter-width;
     + .more,
-    + .pagination {
+    + .pagination-wrapper {
         margin-top: $spacer;
     }
 }

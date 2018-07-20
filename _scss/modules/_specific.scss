@@ -1,0 +1,34 @@
+.pagination-wrapper {
+    position: relative;
+}
+
+.total-items {
+    margin-bottom: round($spacer / 2);
+    text-align: center;
+    @media (min-width: map-get($grid-breakpoints, 'lg')) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: $pagination-padding-y 0;
+        line-height: $pagination-line-height;
+    }
+}
+
+form#try_us_form { position: relative; display: block; }
+form#try_us_form .fieldset { display: flex; align-items: center; align-content: center; flex-wrap: nowrap; min-width: 0; }
+form#try_us_form .form-protection { display: none; }
+form#try_us_form input, form#try_us_form button { font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 20px; font-weight: 400; border-radius: 5px !important; padding: 0 10px; outline: none; height: 42px; margin: 0; box-shadow: none; text-transform: none; width: auto; }
+form#try_us_form .footer-privacy-policy { font-size: 12px; margin: 8px 0 0; padding: 0; line-height: 15px; color: #1f1f1f; }
+form#try_us_form .footer-privacy-policy a { font-size: 12px; }
+/* try us form */
+form#try_us_form .fieldset { margin: 0 auto; padding: 10px; background: #fff; border: 1px solid #e7e7e7; border-radius: 5px; justify-content: center; width: -moz-fit-content; width: fit-content; }
+form#try_us_form input, form#try_us_form button { height: 50px; }
+form#try_us_form input[type="text"] { background: #fff;  color: #1f1f1f; border: 1px solid transparent; min-width: 400px; font-size: 16px; }
+form#try_us_form button[type="submit"] { background: #f7a12b; color: #fff; border: 1px solid #f7a12b; cursor: pointer; white-space: nowrap; margin: 0; text-transform: uppercase; margin: 0 0 0 5px; font-size: 12px; line-height: 16px; }
+form#try_us_form button[type="submit"] strong { font-size: 18px; }
+@media (max-width: map-get($grid-breakpoints, 'lg')) {
+    form#try_us_form .fieldset { flex-flow: column; width: 100%; }
+    form#try_us_form input, form#try_us_form button { width: 100%; text-align: center; }
+    form#try_us_form button[type="submit"] { margin: 5px 0 0; }
+    form#try_us_form input[type="text"] { min-width: 200px; }
+}
