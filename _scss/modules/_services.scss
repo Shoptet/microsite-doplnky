@@ -173,3 +173,9 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
 .service-rating-count {
     text-align: right;
 }
+
+.service-info-table {
+    th {
+        padding-right: 1rem;
+    }
+}
