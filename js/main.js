@@ -88,6 +88,12 @@ function LoaderExtension(naja, idElement, forceRelative) {
     }
     function hideLoader() {
         this.loader.hide();
+        $('html, body').stop(true, true).animate(
+            {
+                scrollTop: 0
+            },
+            300
+        );
     }
     return this;
 }

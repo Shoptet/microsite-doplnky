@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [
-                    '_js/*.js'
+                    'js/*.js'
                 ],
                 tasks: ['uglify:production'],
                 options: {
