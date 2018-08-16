@@ -53,6 +53,7 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
         &:nth-child(4n+4) {
             padding-right: 0;
         }
+        .sidebar &,
         .half & {
             width: 50%;
             &:nth-child(odd) {
