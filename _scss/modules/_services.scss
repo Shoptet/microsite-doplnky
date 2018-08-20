@@ -166,6 +166,9 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     &.service-label-new {
         background-color: $shoptet-green;
     }
+    &.service-label-recommended {
+        background-color: $shoptet-orange;
+    }
     &:last-child {
         border-top-right-radius: $border-radius;
     }
