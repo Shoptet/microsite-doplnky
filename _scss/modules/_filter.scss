@@ -11,7 +11,7 @@
     @media (min-width: map-get($grid-breakpoints, 'sm')) {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-end;
         > div {
             width: calc(50% + #{round($grid-gutter-width / 2)});
             padding-right: $grid-gutter-width;

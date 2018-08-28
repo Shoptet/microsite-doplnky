@@ -9,7 +9,7 @@ $(function() {
 $(window).bind("load", function() {
 
     // filter form submit without click to submit button
-    var sels = document.querySelectorAll('#frm-filterForm select'), i;
+    var sels = document.querySelectorAll('#frm-filterForm select, #frm-filterForm input[type="checkbox"]'), i;
     for (i = 0; i < sels.length; ++i) {
         sels[i].addEventListener('change',function() {
             loader = new Loader('body', true);
