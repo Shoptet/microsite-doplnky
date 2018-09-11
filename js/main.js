@@ -3,7 +3,7 @@ $(function() {
         rel: 'gallery',
         maxWidth: '98%'
     });
-
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 $(window).bind("load", function() {

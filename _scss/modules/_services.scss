@@ -108,12 +108,6 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     font-size: 1rem;
 }
 
-.service-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
 .service-price {
     padding-right: round($grid-gutter-width / 2);
     font-weight: $font-weight-bold;
@@ -168,6 +162,9 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     }
     &.service-label-recommended {
         background-color: $shoptet-orange;
+    }
+    &.service-label-partner {
+        background-color: #f06060;
     }
     &:last-child {
         border-top-right-radius: $border-radius;
