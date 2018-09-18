@@ -1,0 +1,17 @@
+.endpoint-groups {
+    display: flex;
+    align-items: center;
+}
+
+.endpoint-group {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 1ex;
+    text-align: center;
+    color: #fff;
+    background-color: $shoptet-green;
+    + .endpoint-group {
+        margin-left: 1ex;
+    }
+}
