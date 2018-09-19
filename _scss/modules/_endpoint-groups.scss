@@ -4,7 +4,8 @@
 }
 
 .endpoint-group {
-    display: block;
+    display: flex;
+    align-items: center;
     width: 1.5rem;
     height: 1.5rem;
     margin-top: 1ex;
@@ -13,5 +14,9 @@
     background-color: $shoptet-green;
     + .endpoint-group {
         margin-left: 1ex;
+    }
+    i {
+        display: block;
+        margin: 0 auto;
     }
 }
