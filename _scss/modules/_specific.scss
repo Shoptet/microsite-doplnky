@@ -32,3 +32,6 @@ form#try_us_form button[type="submit"] strong { font-size: 18px; }
     form#try_us_form button[type="submit"] { margin: 5px 0 0; }
     form#try_us_form input[type="text"] { min-width: 200px; }
 }
+
+.install-result > p.success { color: $green }
+.install-result > p.error { color: $red }

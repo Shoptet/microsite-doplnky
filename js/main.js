@@ -81,12 +81,13 @@ function LoaderExtension(naja, idElement, forceRelative) {
         this.loader = new Loader(idElement, forceRelative);
     }.bind(this));
     naja.addEventListener('start', showLoader.bind(this));
-    naja.addEventListener('complete', hideLoader.bind(this));
+    naja.addEventListener('complete', complete.bind(this));
 
     function showLoader() {
         this.loader.show();
     }
-    function hideLoader() {
+    function complete() {
+        // hide loader
         this.loader.hide();
         $('html, body').stop(true, true).animate(
             {
@@ -94,6 +95,8 @@ function LoaderExtension(naja, idElement, forceRelative) {
             },
             300
         );
+        // attach tooltip
+        $('[data-toggle="tooltip"]').tooltip();
     }
     return this;
 }
