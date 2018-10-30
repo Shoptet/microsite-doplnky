@@ -4,6 +4,16 @@ $(function() {
         maxWidth: '98%'
     });
     $('[data-toggle="tooltip"]').tooltip();
+
+    $('.content-tabs .tab-link').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('.content-tabs .tab-link').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    })
 });
 
 $(window).bind("load", function() {
