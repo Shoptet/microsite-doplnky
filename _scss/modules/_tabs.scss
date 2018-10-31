@@ -1,0 +1,25 @@
+.content-tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    .tab-link {
+        background: #EDEDED;
+        display: inline-block;
+        padding: round($spacer / 4);
+        cursor: pointer;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        &.current {
+            background: #fff;
+            color: #222;
+        }
+    }
+}
+
+.tab-content {
+    display: none;
+    border-top-left-radius: 0;
+    &.current {
+        display: inherit;
+    }
+}
