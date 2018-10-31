@@ -35,3 +35,11 @@ form#try_us_form button[type="submit"] strong { font-size: 18px; }
 
 .install-result > p.success { color: $green }
 .install-result > p.error { color: $red }
+
+.halfs .btn {
+    float: right;
+}
+
+blockquote {
+    color: #212529;
+}
