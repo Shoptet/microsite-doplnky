@@ -44,3 +44,39 @@ blockquote {
     color: #212529;
     margin-bottom: $paragraph-margin-bottom;
 }
+
+.big {
+    font-size: 120%;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.custom-control-label .discount {
+    color: #5F9A3C;
+}
+
+.has-tooltip {
+    border-bottom: 1px dotted #6c757d;
+    &:hover {
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.loader-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffffb3;
+}
+
+.custom-control-label {
+    &:before,
+    &:after {
+        top: 50%;
+        margin-top: -($custom-control-indicator-size / 2);
+    }
+}
