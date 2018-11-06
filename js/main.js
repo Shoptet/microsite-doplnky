@@ -13,6 +13,12 @@ $(function() {
 
         $(this).addClass('current');
         $("#"+tab_id).addClass('current');
+
+        var offset = $(this).offset();
+
+        $('html, body').animate({
+            scrollTop: offset.top
+        });
     })
 });
 
