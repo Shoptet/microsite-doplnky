@@ -80,3 +80,14 @@ blockquote {
         margin-top: -($custom-control-indicator-size / 2);
     }
 }
+
+.sticky-sidebar {
+    align-items: stretch;
+    .sidebar {
+        position: relative;
+        .content-box {
+            position: sticky;
+            top: 1rem;
+        }
+    }
+}
