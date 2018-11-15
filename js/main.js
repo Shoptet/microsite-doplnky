@@ -8,21 +8,31 @@ $(function() {
     $('.content-tabs .tab-link').click(function(){
         var tab_id = $(this).attr('data-tab');
         location.hash = tab_id;
-
-        $('.content-tabs .tab-link').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#"+tab_id).addClass('current');
-
-        var offset = $(this).offset();
-        $('html, body').animate({
-            scrollTop: offset.top
-        });
+        animateTabHash($(this), tab_id);
     })
 });
 
+function animateTabHash(element, tab_id) {
+    $('.content-tabs .tab-link').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    element.addClass('current');
+    $("#"+tab_id).addClass('current');
+
+    var offset = element.offset();
+    $('html, body').animate({
+        scrollTop: offset.top
+    });
+}
+
 $(window).bind("load", function() {
+    if(window.location.hash) {
+        var hash = window.location.hash.substring(1);
+        var tabElement =  $('[data-tab="'+hash+'"].tab-link');
+        if(tabElement.length && tabElement.not('.current')) {
+            animateTabHash(tabElement, hash);
+        }
+    }
 
     // filter form submit without click to submit button
     var sels = document.querySelectorAll('#frm-filterForm select, #frm-filterForm input[type="checkbox"]'), i;
