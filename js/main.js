@@ -40,6 +40,9 @@ $(window).bind("load", function() {
         sels[i].addEventListener('change',function() {
             loader = new Loader('body', true);
             loader.show();
+            if (this.id == 'filterCategories') {
+                document.getElementById('filterAuthor').value = '';
+            }
             document.getElementById('frm-filterForm').submit();
         }, false);
     }
