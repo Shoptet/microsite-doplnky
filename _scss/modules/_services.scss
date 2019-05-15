@@ -1,14 +1,16 @@
-$service-2-gutter-width: round($grid-gutter-width / 2);
-$service-4-gutter-width: round($grid-gutter-width * .75);
-
 .services {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     margin-bottom: -$grid-gutter-width;
+    margin-left: -(round($grid-gutter-width / 2));
+    margin-right: -(round($grid-gutter-width / 2));
     + .more,
     + .pagination-wrapper {
         margin-top: $spacer;
+    }
+    .section-inner.container & {
+        max-width: unset;
     }
 }
 
@@ -18,50 +20,18 @@ $service-4-gutter-width: round($grid-gutter-width * .75);
     flex-shrink: 1;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 50%;
     margin-bottom: $grid-gutter-width;
+    padding-left: round($grid-gutter-width / 2);
+    padding-right: round($grid-gutter-width / 2);
     &:hover {
         text-decoration: none;
     }
-    @media (min-width: map-get($grid-breakpoints, 'sm')) {
-        width: 50%;
-        padding-left: $service-2-gutter-width;
-        padding-right: $service-2-gutter-width;
-        &:nth-child(odd) {
-            padding-left: 0;
-        }
-        &:nth-child(even) {
-            padding-right: 0;
-        }
-    }
     @media (min-width: map-get($grid-breakpoints, 'lg')) {
-        width: calc(25% + #{$service-4-gutter-width / 2});
-        padding-left: $service-4-gutter-width;
-        padding-right: $service-4-gutter-width;
-        &:nth-child(4n+2),
-        &:nth-child(4n+3) {
-            padding-left: $service-4-gutter-width;
-            padding-right: $service-4-gutter-width;
-        }
-        &:nth-child(4n+1),
-        &:nth-child(4n+4) {
-            width: calc(25% - #{$service-4-gutter-width / 2});
-        }
-        &:nth-child(4n+1) {
-            padding-left: 0;
-        }
-        &:nth-child(4n+4) {
-            padding-right: 0;
-        }
+        width: 25%;
         .sidebar &,
         .half & {
             width: 50%;
-            &:nth-child(odd) {
-                padding-left: 0;
-            }
-            &:nth-child(even) {
-                padding-right: 0;
-            }
         }
     }
 }
