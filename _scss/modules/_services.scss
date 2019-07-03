@@ -135,6 +135,7 @@
     }
     &.service-label-new {
         background-color: $shoptet-green;
+        white-space: nowrap;
     }
     &.service-label-recommended {
         background-color: $shoptet-orange;
