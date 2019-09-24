@@ -12,6 +12,20 @@
     textarea.form-control {
         margin-bottom: round($spacer / 2);
     }
+    .star {
+        cursor: pointer;
+    }
+    .star-radio {
+        position: fixed;
+        opacity: 0;
+    }
+    .star-hover {
+        border-bottom-color: $star-on-color;
+        &::before,
+        &::after {
+            border-bottom-color: $star-on-color;
+        }
+    }
 }
 
 .rating-form-submit {
@@ -104,11 +118,5 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-    }
-}
-
-.rating-review-rating {
-    @media (min-width: map-get($grid-breakpoints, 'md')) {
-
     }
 }
