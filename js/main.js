@@ -9,7 +9,27 @@ $(function() {
         var tab_id = $(this).attr('data-tab');
         location.hash = tab_id;
         animateTabHash($(this), tab_id);
-    })
+    });
+
+
+    $('#rating-form .stars .star').on("click", function(e){
+        $('#rating-form .stars .star').removeClass('star-hover');
+        $(this).addClass('star-on').removeClass('star-off');
+        $(this).prevAll('.star').addClass('star-on').removeClass('star-off');
+        $(this).nextAll('.star').addClass('star-off').removeClass('star-on');
+    });
+
+
+    $('#rating-form .stars .star').hover(
+    function(){
+        if($(this).hasClass('star-off')){
+            $(this).addClass('star-hover').prevAll('.star-off').addClass('star-hover');
+        }
+    }, function(){
+        if($(this).hasClass('star-off')){
+            $(this).removeClass('star-hover').prevAll('.star-off').removeClass('star-hover');
+        }
+    });
 });
 
 function animateTabHash(element, tab_id) {
