@@ -1,16 +1,20 @@
 .screenshots {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -($paragraph-margin-bottom / 2);
     a {
         flex-grow: 0;
         display: block;
-        width: 50%;
-        margin-bottom: $paragraph-margin-bottom;
+        width: calc(50% - #{$paragraph-margin-bottom});
+        margin: $paragraph-margin-bottom / 2;
         border: 1px solid $border-color;
+        img {
+            display: block;
+        }
     }
     @media (min-width: map-get($grid-breakpoints, 'sm')) {
         a {
-            width: 33.333333%;
+            width: calc(33.333333% - #{$paragraph-margin-bottom});
         }
     }
 }
