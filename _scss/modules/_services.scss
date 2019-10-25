@@ -38,7 +38,8 @@
 
 .service-inner {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -105,18 +106,37 @@
 
 .service-rating {
     display: flex;
+    flex-wrap: wrap;
     align-self: flex-end;
     align-items: center;
-    padding: round($spacer / 2) round($grid-gutter-width / 2);
+    padding: 0 round($grid-gutter-width / 2);
     background-color: $gray-light;
+    margin-top: auto;
+}
+
+.service-rating-stars {
+    padding-top: round($spacer / 2);
+    flex-basis: 100%;
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        flex-basis: auto;
+        padding: round($spacer / 2) round($grid-gutter-width / 4) round($spacer / 2) 0;
+    }
+}
+
+.service-rating-count {
+    padding: round($grid-gutter-width / 2) 0;
+    text-align: left;
+    color: $gray-dark;
+    @media (min-width: map-get($grid-breakpoints, 'sm')) {
+        text-align: right;
+    }
 }
 
 .service-rating-stars,
 .service-rating-count {
     flex-grow: 1;
     flex-shrink: 0;
-    width: 50%;
-    line-height: 0;
+    line-height: 1;
 }
 
 .service-labels {
@@ -143,10 +163,6 @@
     &:last-child {
         border-top-right-radius: $border-radius;
     }
-}
-
-.service-rating-count {
-    text-align: right;
 }
 
 .service-info-table {
