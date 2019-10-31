@@ -20,9 +20,7 @@ module.exports = function(grunt) {
             css: {
                 files: [
                     '_scss/*.scss',
-                    '_scss/modules/*.scss',
-                    '../scaffolding/shoptet.scss',
-                    '../scaffolding/shoptet/*.scss'
+                    '_scss/modules/*.scss'
                 ],
                 tasks: ['sass:production'],
                 options: {
