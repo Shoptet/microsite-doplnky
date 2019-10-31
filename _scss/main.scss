@@ -1,12 +1,12 @@
-$fa-font-path: "../../scaffolding/vendor/fa/webfonts";
-$claim-bg-image: url('../../dist/img/bulbs.png');
-$colorbox-path: "../../scaffolding/img/colorbox/";
+$fa-font-path: "../../dist/fonts";
+$claim-bg-image: url('../../dist/img/claim.png');
+$colorbox-path: "../../dist/img/colorbox/";
 
-@import "../../scaffolding/shoptet/variables-bootstrap";
-@import "../../scaffolding/vendor/bs/scss/functions";
-@import "../../scaffolding/vendor/bs/scss/variables";
-@import "../../scaffolding/shoptet/variables-shoptet";
-@import "../../scaffolding/vendor/bs/scss/mixins";
+@import "../node_modules/shoptet-microsite-styles/shoptet/variables-bootstrap";
+@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/functions";
+@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/variables";
+@import "../node_modules/shoptet-microsite-styles/shoptet/variables-shoptet";
+@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/mixins";
 @import "modules/variables";
 @import "modules/services";
 @import "modules/filter";
