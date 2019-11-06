@@ -2,11 +2,11 @@ $fa-font-path: "../../dist/fonts";
 $claim-bg-image: url('../../dist/img/claim.png');
 $colorbox-path: "../../dist/img/colorbox/";
 
-@import "../node_modules/shoptet-microsite-styles/shoptet/variables-bootstrap";
-@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/functions";
-@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/variables";
-@import "../node_modules/shoptet-microsite-styles/shoptet/variables-shoptet";
-@import "../node_modules/shoptet-microsite-styles/vendor/bs/scss/mixins";
+@import "../../../../microsite-styles/shoptet/variables-bootstrap";
+@import "../../../../microsite-styles/vendor/bs/scss/functions";
+@import "../../../../microsite-styles/vendor/bs/scss/variables";
+@import "../../../../microsite-styles/shoptet/variables-shoptet";
+@import "../../../../microsite-styles/vendor/bs/scss/mixins";
 @import "modules/variables";
 @import "modules/services";
 @import "modules/filter";

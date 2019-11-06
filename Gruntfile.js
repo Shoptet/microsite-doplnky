@@ -8,10 +8,10 @@ module.exports = function(grunt) {
         sass: {
             production: {
                 options: {
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: {
-                    '../dist/css/shoptet.css': 'node_modules/shoptet-microsite-styles/shoptet.scss',
+                    '../dist/css/shoptet.css': '../../../microsite-styles/shoptet.scss',
                     '../dist/css/main.css': '_scss/main.scss'
                 }
             }
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'node_modules/shoptet-microsite-styles/vendor/fa/webfonts/',
+                        cwd: '../../../microsite-styles/vendor/fa/webfonts/',
                         src: ['*'],
                         dest: '../dist/fonts/',
                         filter: 'isFile'
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'node_modules/shoptet-microsite-styles/img',
+                        cwd: '../../../microsite-styles/img',
                         src: ['**'],
                         dest: '../dist/img/'
                     }
